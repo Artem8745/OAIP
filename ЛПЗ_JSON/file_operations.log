@@ -1,0 +1,116 @@
+[2026-03-14 09:49:13] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 09:49:13] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 09:49:13] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 09:49:13] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 09:49:13] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 09:49:13] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 09:49:13] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 09:49:13] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 09:49:13] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 09:49:13] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 09:49:13] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 09:49:13] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 09:49:13] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 09:49:13] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 09:49:13] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 09:49:13] INFO: Данные успешно записаны в test_output.csv
+[2026-03-14 09:53:00] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 09:53:00] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 09:53:00] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 09:53:00] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 09:53:00] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 09:53:00] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 09:53:00] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 09:53:00] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 09:53:00] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 09:53:00] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 09:53:00] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 09:53:00] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 09:53:00] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 09:53:00] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 09:53:00] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 09:53:00] INFO: Данные успешно записаны в test_output.csv
+[2026-03-14 09:54:00] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 09:54:00] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 09:54:00] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 09:54:00] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 09:54:00] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 09:54:00] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 09:54:00] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 09:54:00] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 09:54:00] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 09:54:00] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 09:54:00] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 09:54:00] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 09:54:00] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 09:54:00] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 09:54:00] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 09:54:00] INFO: Данные успешно записаны в test_output.csv
+[2026-03-14 09:54:21] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 09:54:21] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 09:54:21] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 09:54:21] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 09:54:21] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 09:54:21] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 09:54:21] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 09:54:21] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 09:54:21] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 09:54:21] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 09:54:21] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 09:54:21] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 09:54:21] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 09:54:21] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 09:54:21] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 09:54:21] INFO: Данные успешно записаны в test_output.csv
+[2026-03-14 09:58:22] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 09:58:22] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 09:58:22] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 09:58:22] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 09:58:22] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 09:58:22] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 09:58:22] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 09:58:22] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 09:58:22] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 09:58:22] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 09:58:22] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 09:58:22] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 09:58:22] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 09:58:22] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 09:58:22] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 09:58:22] INFO: Данные успешно записаны в test_output.csv
+[2026-03-14 09:58:30] INFO: Попытка чтения JSON файла: C:\Users\Artyom\Downloads\NSI_1_2_643_5_1_13_13_99_2_540_3UTF_8.json
+[2026-03-14 09:58:52] INFO: JSON файл успешно прочитан: 3 записей
+[2026-03-14 10:03:25] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 10:03:25] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 10:03:25] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 10:03:25] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 10:03:25] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 10:03:25] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 10:03:25] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 10:03:25] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 10:03:25] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 10:03:25] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 10:03:25] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 10:03:25] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 10:03:25] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 10:03:25] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 10:03:25] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 10:03:25] INFO: Данные успешно записаны в test_output.csv
+[2026-03-14 10:03:29] INFO: Попытка чтения JSON файла: C:\Users\Artyom\Downloads\NSI_1_2_643_5_1_13_13_99_2_540_3UTF_8.json
+[2026-03-14 10:03:50] INFO: JSON файл успешно прочитан: 3 записей
+[2026-03-14 10:08:17] INFO: Попытка чтения JSON файла: students.json
+[2026-03-14 10:08:17] INFO: JSON файл успешно прочитан: 2 записей
+[2026-03-14 10:08:17] INFO: Попытка чтения CSV файла: grades.csv
+[2026-03-14 10:08:17] INFO: CSV файл прочитан: 5 строк данных
+[2026-03-14 10:08:17] INFO: Попытка чтения JSON файла: ne_sushestvuet.json
+[2026-03-14 10:08:17] ERROR: Файл не найден: ne_sushestvuet.json
+[2026-03-14 10:08:17] INFO: Попытка чтения JSON файла: broken.json
+[2026-03-14 10:08:17] ERROR: Ошибка формата JSON: Expecting property name enclosed in double quotes: line 5 column 24 (char 81)
+[2026-03-14 10:08:17] INFO: Попытка записи в JSON файл: /system/test.json
+[2026-03-14 10:08:17] ERROR: Ошибка при записи JSON: [Errno 2] No such file or directory: '/system/test.json'
+[2026-03-14 10:08:17] INFO: Попытка чтения CSV файла: students.json
+[2026-03-14 10:08:17] INFO: CSV файл прочитан: 53 строк данных
+[2026-03-14 10:08:17] INFO: Попытка записи в JSON файл: test_output.json
+[2026-03-14 10:08:17] INFO: Данные успешно записаны в test_output.json
+[2026-03-14 10:08:17] INFO: Попытка записи в CSV файл: test_output.csv
+[2026-03-14 10:08:17] INFO: Данные успешно записаны в test_output.csv
