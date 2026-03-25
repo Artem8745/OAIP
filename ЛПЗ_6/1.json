@@ -1,0 +1,47 @@
+{
+  "account_number": "1",
+  "owner": "Толя",
+  "balance": 236.0,
+  "currency": "RUB",
+  "transactions": [
+    {
+      "date": "2026-03-25 13:20:40",
+      "type": "DEPOSIT",
+      "amount": 1000.0,
+      "balance_after": 1000.0,
+      "description": "Начальный взнос"
+    },
+    {
+      "date": "2026-03-25 13:20:45",
+      "type": "INTEREST",
+      "amount": 30.0,
+      "balance_after": 1030.0,
+      "description": "Начисление процентов (3.0%)"
+    },
+    {
+      "date": "2026-03-25 13:20:48",
+      "type": "INTEREST_RATE_CHANGE",
+      "amount": 0,
+      "balance_after": 1030.0,
+      "description": "Изменение ставки: 3.0% → 20.0%"
+    },
+    {
+      "date": "2026-03-25 13:20:49",
+      "type": "INTEREST",
+      "amount": 206.0,
+      "balance_after": 1236.0,
+      "description": "Начисление процентов (20.0%)"
+    },
+    {
+      "date": "2026-03-25 13:21:00",
+      "type": "WITHDRAWAL",
+      "amount": 1000.0,
+      "balance_after": 236.0,
+      "description": ""
+    }
+  ],
+  "is_active": true,
+  "interest_rate": 20.0,
+  "withdrawal_count": 1,
+  "last_reset_date": "2026-03"
+}

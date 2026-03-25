@@ -4,6 +4,7 @@
 
 from bank_account import BankAccount, SavingsAccount, CreditAccount, DepositAccount
 import sys
+import json
 
 
 class BankApplication:
@@ -28,9 +29,10 @@ class BankApplication:
         print("8. Показать все счета")
         print("9. Статистика по счету")
         print("10. Начислить проценты")
-        print("11. Сохранить счет в файл")
-        print("12. Загрузить счет из файла")
-        print("13. Закрыть счет")
+        print("11. Изменить процентную ставку")
+        print("12. Сохранить счет в файл")
+        print("13. Загрузить счет из файла")
+        print("14. Закрыть счет")
         print("0. Выход")
         print("=" * 50)
     
@@ -211,7 +213,11 @@ class BankApplication:
         
         for acc_num, acc in self.accounts.items():
             status = "✅ Активен" if acc.is_active else "🔒 Закрыт"
-            print(f"{acc_num} | {acc.owner} | {acc.balance:.2f} {acc.currency} | {status}")
+            # Показываем процентную ставку для каждого счета
+            interest_info = ""
+            if hasattr(acc, 'interest_rate'):
+                interest_info = f" | {acc.interest_rate:.2f}%"
+            print(f"{acc_num} | {acc.owner} | {acc.balance:.2f} {acc.currency} | {status}{interest_info}")
         
         print("=" * 60)
     
@@ -236,7 +242,32 @@ class BankApplication:
             print("❌ Сначала выберите счет (пункт 2)")
             return
         
-        self.current_account.add_interest()
+        # Проверяем, есть ли у счета метод add_interest
+        if hasattr(self.current_account, 'add_interest'):
+            self.current_account.add_interest()
+        else:
+            print("⚠️ Данный тип счета не поддерживает начисление процентов")
+    
+    def change_interest_rate(self):
+        """Изменяет процентную ставку для текущего счета."""
+        if not self.current_account:
+            print("❌ Сначала выберите счет (пункт 2)")
+            return
+        
+        print("\n--- ИЗМЕНЕНИЕ ПРОЦЕНТНОЙ СТАВКИ ---")
+        
+        # Показываем текущую ставку
+        current_rate = self.current_account.interest_rate
+        print(f"Текущая процентная ставка: {current_rate:.2f}%")
+        
+        try:
+            new_rate = float(input("Введите новую процентную ставку (%): "))
+            
+            # Используем метод set_interest_rate вместо прямого присваивания
+            self.current_account.set_interest_rate(new_rate)
+            
+        except ValueError:
+            print("❌ Неверный формат числа. Введите число.")
     
     def save_account(self):
         """Сохраняет текущий счет в файл."""
@@ -301,9 +332,13 @@ class BankApplication:
             self.print_menu()
             
             if self.current_account:
-                print(f"\n💰 Текущий счет: {self.current_account.account_number} ({self.current_account.owner})")
+                # Показываем текущий счет и его процентную ставку
+                interest_info = ""
+                if hasattr(self.current_account, 'interest_rate'):
+                    interest_info = f" | {self.current_account.interest_rate:.2f}%"
+                print(f"\n💰 Текущий счет: {self.current_account.account_number} ({self.current_account.owner}){interest_info}")
             
-            choice = input("\nВыберите действие (0-13): ").strip()
+            choice = input("\nВыберите действие (0-14): ").strip()
             
             if choice == "0":
                 print("\n👋 До свидания!")
@@ -329,13 +364,15 @@ class BankApplication:
             elif choice == "10":
                 self.add_interest()
             elif choice == "11":
-                self.save_account()
+                self.change_interest_rate()
             elif choice == "12":
-                self.load_account()
+                self.save_account()
             elif choice == "13":
+                self.load_account()
+            elif choice == "14":
                 self.close_account()
             else:
-                print("❌ Неверный выбор. Пожалуйста, выберите 0-13")
+                print("❌ Неверный выбор. Пожалуйста, выберите 0-14")
 
 
 if __name__ == "__main__":

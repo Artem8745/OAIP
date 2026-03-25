@@ -102,6 +102,11 @@ class BankAccount:
     def is_active(self):
         return self._is_active
     
+    @property
+    def interest_rate(self):
+        """Геттер для процентной ставки."""
+        return self._interest_rate
+    
     def deposit(self, amount, description=""):
         """
         Вносит деньги на счет.
@@ -227,6 +232,7 @@ class BankAccount:
         old_rate = self._interest_rate
         self._interest_rate = rate
         print(f"📊 Процентная ставка изменена: {old_rate}% → {rate}%")
+        self._add_transaction("INTEREST_RATE_CHANGE", 0, f"Изменение ставки: {old_rate}% → {rate}%")
         return True
     
     def close_account(self):
@@ -281,15 +287,23 @@ class BankAccount:
             elif t["type"] == "WITHDRAWAL":
                 emoji = "💸"
                 operation = "СНЯТИЕ"
-            else:
+            elif t["type"] == "INTEREST":
                 emoji = "📈"
                 operation = "ПРОЦЕНТЫ"
+            elif t["type"] == "INTEREST_RATE_CHANGE":
+                emoji = "📊"
+                operation = "ИЗМЕНЕНИЕ СТАВКИ"
+            else:
+                emoji = "📝"
+                operation = "ОПЕРАЦИЯ"
             
             print(f"{emoji} {t['date']} | {operation}")
-            print(f"   Сумма: {t['amount']:.2f} {self._currency}")
+            if t['amount'] != 0:
+                print(f"   Сумма: {t['amount']:.2f} {self._currency}")
             if t['description']:
                 print(f"   Описание: {t['description']}")
-            print(f"   Баланс после: {t['balance_after']:.2f} {self._currency}")
+            if t['type'] != "INTEREST_RATE_CHANGE":
+                print(f"   Баланс после: {t['balance_after']:.2f} {self._currency}")
             print("-" * 70)
     
     # ==================== Задание 4: Статистика ====================
@@ -327,8 +341,13 @@ class BankAccount:
             print("📊 Нет операций для анализа")
             return 0
         
-        total = sum(t['amount'] for t in self._transactions)
-        avg = total / len(self._transactions)
+        total = sum(t['amount'] for t in self._transactions if t['type'] not in ['INTEREST_RATE_CHANGE'])
+        count = len([t for t in self._transactions if t['type'] not in ['INTEREST_RATE_CHANGE']])
+        if count == 0:
+            print("📊 Нет операций для анализа")
+            return 0
+        
+        avg = total / count
         print(f"📊 Средняя сумма операции: {avg:.2f} {self._currency}")
         return avg
     
@@ -389,6 +408,7 @@ class BankAccount:
             print(f"❌ Ошибка при сохранении: {e}")
             return False
     
+    @classmethod
     def load_from_file(cls, filename):
         """
         Загружает данные счета из JSON файла.
@@ -459,6 +479,21 @@ class SavingsAccount(BankAccount):
             return False
         
         return super().withdraw(amount, description)
+    
+    def set_interest_rate(self, rate):
+        """Устанавливает новую процентную ставку для сберегательного счета."""
+        if rate < 0:
+            print("❌ Процентная ставка не может быть отрицательной")
+            return False
+        
+        if rate > 20:
+            print("⚠️ Внимание: высокая процентная ставка для сберегательного счета")
+        
+        old_rate = self._interest_rate
+        self._interest_rate = rate
+        print(f"📊 Процентная ставка сберегательного счета изменена: {old_rate}% → {rate}%")
+        self._add_transaction("INTEREST_RATE_CHANGE", 0, f"Изменение ставки: {old_rate}% → {rate}%")
+        return True
     
     def display_info(self):
         """Выводит информацию о сберегательном счете."""
@@ -541,6 +576,21 @@ class CreditAccount(BankAccount):
         print(f"   Текущий баланс: {self._balance:.2f} {self._currency}")
         return interest_amount
     
+    def set_interest_rate(self, rate):
+        """Устанавливает новую процентную ставку для кредитного счета."""
+        if rate < 0:
+            print("❌ Процентная ставка не может быть отрицательной")
+            return False
+        
+        if rate > 30:
+            print("⚠️ Внимание: очень высокая процентная ставка по кредиту")
+        
+        old_rate = self._interest_rate
+        self._interest_rate = rate
+        print(f"📊 Процентная ставка по кредиту изменена: {old_rate}% → {rate}%")
+        self._add_transaction("INTEREST_RATE_CHANGE", 0, f"Изменение кредитной ставки: {old_rate}% → {rate}%")
+        return True
+    
     def display_info(self):
         """Выводит информацию о кредитном счете."""
         super().display_info()
@@ -599,6 +649,21 @@ class DepositAccount(BankAccount):
         else:
             print(f"ℹ️ Проценты будут начислены по окончании срока депозита")
             return 0
+    
+    def set_interest_rate(self, rate):
+        """Устанавливает новую процентную ставку для депозитного счета."""
+        if rate < 0:
+            print("❌ Процентная ставка не может быть отрицательной")
+            return False
+        
+        if rate > 15:
+            print("⚠️ Внимание: высокая процентная ставка для депозита")
+        
+        old_rate = self._interest_rate
+        self._interest_rate = rate
+        print(f"📊 Процентная ставка по депозиту изменена: {old_rate}% → {rate}%")
+        self._add_transaction("INTEREST_RATE_CHANGE", 0, f"Изменение депозитной ставки: {old_rate}% → {rate}%")
+        return True
     
     def display_info(self):
         """Выводит информацию о депозитном счете."""
