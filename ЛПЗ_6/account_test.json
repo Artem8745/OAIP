@@ -1,0 +1,40 @@
+{
+  "account_number": "ACC001",
+  "owner": "Иван Петров",
+  "balance": 1365.0,
+  "currency": "RUB",
+  "transactions": [
+    {
+      "date": "2026-03-25 12:41:10",
+      "type": "DEPOSIT",
+      "amount": 1000,
+      "balance_after": 1000,
+      "description": "Начальный взнос"
+    },
+    {
+      "date": "2026-03-25 12:41:10",
+      "type": "DEPOSIT",
+      "amount": 500,
+      "balance_after": 1500,
+      "description": "Зарплата"
+    },
+    {
+      "date": "2026-03-25 12:41:10",
+      "type": "WITHDRAWAL",
+      "amount": 200,
+      "balance_after": 1300,
+      "description": "Продукты"
+    },
+    {
+      "date": "2026-03-25 12:41:10",
+      "type": "INTEREST",
+      "amount": 65.0,
+      "balance_after": 1365.0,
+      "description": "Начисление процентов (5.0%)"
+    }
+  ],
+  "is_active": true,
+  "interest_rate": 5.0,
+  "withdrawal_count": 1,
+  "last_reset_date": "2026-03"
+}
