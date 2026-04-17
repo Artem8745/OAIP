@@ -1,0 +1,37 @@
+[
+  {
+    "title": "Подготовить отчет",
+    "date": "2026-04-15",
+    "description": "Квартальный отчет",
+    "completed": false,
+    "created": "2026-04-17"
+  },
+  {
+    "title": "Встреча с клиентом",
+    "date": "2026-04-17",
+    "description": "Обсуждение проекта",
+    "completed": false,
+    "created": "2026-04-17"
+  },
+  {
+    "title": "Сходить в спортзал",
+    "date": "2026-04-19",
+    "description": "",
+    "completed": false,
+    "created": "2026-04-17"
+  },
+  {
+    "title": "Оплатить счета",
+    "date": "2026-04-22",
+    "description": "",
+    "completed": false,
+    "created": "2026-04-17"
+  },
+  {
+    "title": "Позвонить маме",
+    "date": "2026-04-24",
+    "description": "",
+    "completed": false,
+    "created": "2026-04-17"
+  }
+]
