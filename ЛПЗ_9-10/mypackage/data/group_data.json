@@ -1,0 +1,139 @@
+{
+  "name": "ПИН-231",
+  "curator": "Иванова М.А.",
+  "students_count": 5,
+  "average_grade": 4.4,
+  "students": [
+    {
+      "student_id": "STU0001",
+      "first_name": "Иван",
+      "last_name": "Петров",
+      "age": 19,
+      "email": "ivan.petrov@example.com",
+      "grades": [
+        {
+          "subject": "Python",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.522154"
+        },
+        {
+          "subject": "Математика",
+          "grade": 4,
+          "date": "2026-04-17T10:20:28.522154"
+        },
+        {
+          "subject": "Физика",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.522154"
+        }
+      ],
+      "average_grade": 4.666666666666667,
+      "created_at": "2026-04-17T10:20:28.520151"
+    },
+    {
+      "student_id": "STU0002",
+      "first_name": "Анна",
+      "last_name": "Сидорова",
+      "age": 20,
+      "email": "anna.s@example.com",
+      "grades": [
+        {
+          "subject": "Python",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.522154"
+        },
+        {
+          "subject": "Математика",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.522154"
+        },
+        {
+          "subject": "Физика",
+          "grade": 4,
+          "date": "2026-04-17T10:20:28.523149"
+        }
+      ],
+      "average_grade": 4.666666666666667,
+      "created_at": "2026-04-17T10:20:28.521150"
+    },
+    {
+      "student_id": "STU0003",
+      "first_name": "Петр",
+      "last_name": "Иванов",
+      "age": 18,
+      "email": null,
+      "grades": [
+        {
+          "subject": "Python",
+          "grade": 3,
+          "date": "2026-04-17T10:20:28.523149"
+        },
+        {
+          "subject": "Математика",
+          "grade": 4,
+          "date": "2026-04-17T10:20:28.523149"
+        },
+        {
+          "subject": "Физика",
+          "grade": 3,
+          "date": "2026-04-17T10:20:28.523149"
+        }
+      ],
+      "average_grade": 3.3333333333333335,
+      "created_at": "2026-04-17T10:20:28.521150"
+    },
+    {
+      "student_id": "STU0004",
+      "first_name": "Мария",
+      "last_name": "Кузнецова",
+      "age": 21,
+      "email": "maria@example.com",
+      "grades": [
+        {
+          "subject": "Python",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.523149"
+        },
+        {
+          "subject": "Математика",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.523149"
+        },
+        {
+          "subject": "Физика",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.524150"
+        }
+      ],
+      "average_grade": 5.0,
+      "created_at": "2026-04-17T10:20:28.522154"
+    },
+    {
+      "student_id": "STU0005",
+      "first_name": "Алексей",
+      "last_name": "Смирнов",
+      "age": 19,
+      "email": "alexey@domain.ru",
+      "grades": [
+        {
+          "subject": "Python",
+          "grade": 4,
+          "date": "2026-04-17T10:20:28.524150"
+        },
+        {
+          "subject": "Математика",
+          "grade": 4,
+          "date": "2026-04-17T10:20:28.524150"
+        },
+        {
+          "subject": "Физика",
+          "grade": 5,
+          "date": "2026-04-17T10:20:28.524150"
+        }
+      ],
+      "average_grade": 4.333333333333333,
+      "created_at": "2026-04-17T10:20:28.522154"
+    }
+  ],
+  "created_at": "2026-04-17T10:20:28.524150"
+}
