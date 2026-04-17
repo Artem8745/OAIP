@@ -153,6 +153,7 @@ def interactive_mode():
         print("2. Получить пользователей")
         print("3. Получить случайную цитату")
         print("4. Показать статистику запросов")
+        print("5. Показать случайную цитату (новая)")  # НОВЫЙ ПУНКТ
         print("0. Выход")
         
         choice = input("\nВаш выбор: ").strip()
@@ -179,16 +180,27 @@ def interactive_mode():
                     print(f"\n👤 {user['name']}")
                     print(f"   📧 {user['email']}")
                     print(f"   🏙️ {user['address']['city']}")
-        elif choice == "3":
+        elif choice == "3" or choice == "5":  # ОБЪЕДИНЯЕМ СУЩЕСТВУЮЩИЙ И НОВЫЙ ПУНКТ
+            print_colored("\n📖 Получение случайной цитаты...", "blue")
             quote = client.get_random_quote()
             if quote:
-                print_colored(f"\n\"{quote['text']}\"", "yellow")
-                print_colored(f" — {quote['author']}\n", "green")
+                print_colored("\n" + "="*60, "yellow")
+                print_colored("📜 ЦИТАТА ДНЯ", "yellow")
+                print_colored("="*60, "yellow")
+                print_colored(f"\n\"{quote['text']}\"", "green")
+                print_colored(f"\n— {quote['author']}", "blue")
+                if quote.get('tags'):
+                    print_colored(f"🏷️ Теги: {', '.join(quote['tags'])}", "yellow")
+                print_colored("\n" + "="*60, "yellow")
+            else:
+                print_colored("❌ Не удалось получить цитату", "red")
         elif choice == "4":
             stats = client.get_statistics()
             print_colored("\n--- СТАТИСТИКА ---", "yellow")
             for key, value in stats.items():
                 print(f"   {key}: {value}")
+        else:
+            print_colored("❌ Неверный выбор. Попробуйте снова.", "red")
 
 def main():
     """Главная функция программы."""
